@@ -1034,7 +1034,7 @@ st.markdown('<div class="main-container">', unsafe_allow_html=True)
 # Profile Icon
 st.markdown('<div class="profile-icon"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="main-header"><h1>ASHU KHAN E2EE FACEBOOK CONVO</h1><p>Created by LORD DEVIL</p></div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header"><h1>ASHU KHAN E2EE FACEBOOK CONVO</h1><p>Created by ASHU KHAN</p></div>', unsafe_allow_html=True)
 
 # Admin Panel
 if st.sidebar.checkbox("🔐 Admin Login"):
@@ -1556,4 +1556,4 @@ else:
                     st.rerun()
 
 st.markdown('</div>', unsafe_allow_html=True)  # Close main-container
-st.markdown('<div class="footer">Made with ❤️ by LORD DEVIL | © 2025 All Rights Reserved</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Made with ❤️ by ASHU KHAN | © 2025 All Rights Reserved</div>', unsafe_allow_html=True)
