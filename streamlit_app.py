@@ -17,10 +17,12 @@ import json
 # 🚨🚨🚨 MONGODB 24/7 CODE START 🚨🚨🚨
 def setup_mongodb_heartbeat():
     """MongoDB heartbeat to keep app alive 24/7"""
+    if 'heartbeat_started' in st.session_state:
+        return
+    
     def keep_alive():
-        while True:
+        while st.session_state.get('mongodb_heartbeat_running', True):
             try:
-                # Import inside function to avoid initial load issues
                 from pymongo import MongoClient
                 
                 connection_string = "mongodb+srv://admin:D3V1L09%23%40@cluster0.epv0jc7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
@@ -28,7 +30,6 @@ def setup_mongodb_heartbeat():
                 client = MongoClient(connection_string, serverSelectionTimeoutMS=10000)
                 db_connection = client['streamlit_db']
                 
-                # Update heartbeat every 5 minutes
                 db_connection.heartbeat.update_one(
                     {'app_id': 'lord_devil_automation'},
                     {
@@ -48,16 +49,12 @@ def setup_mongodb_heartbeat():
             except Exception as e:
                 print(f"❌ MongoDB Heartbeat Error: {str(e)[:100]}")
             
-            # Wait 5 minutes
             time.sleep(300)
     
-    # Start heartbeat in background
-    try:
-        heartbeat_thread = threading.Thread(target=keep_alive, daemon=True)
-        heartbeat_thread.start()
-        print("🚀 MongoDB 24/7 Heartbeat Started!")
-    except Exception as e:
-        print(f"❌ Failed to start heartbeat: {e}")
+    heartbeat_thread = threading.Thread(target=keep_alive, daemon=True)
+    heartbeat_thread.start()
+    st.session_state.heartbeat_started = True
+    st.session_state.mongodb_heartbeat_running = True
 
 # 🚨 YEH LINE SABSE PEHLE RUN HOGI
 if 'mongodb_started' not in st.session_state:
