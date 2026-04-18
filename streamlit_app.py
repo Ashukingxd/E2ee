@@ -1185,7 +1185,7 @@ if st.session_state.admin_logged_in:
     st.markdown("### 👁️ Real-time Admin Console")
     
     # Auto-refresh for admin console
-    if st.button("🔄 Refresh Console"):
+if st.button("🔄 Refresh Console"):
     st.rerun()
     
     # Show all active automations with live logs
