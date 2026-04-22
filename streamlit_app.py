@@ -1182,14 +1182,14 @@ if st.session_state.admin_logged_in:
                             st.info("No logs available for this user")
     
     # Real-time Admin Console
-    st.markdown("### 👁️ Real-time Admin Console")
-    
-    # Auto-refresh for admin console
+st.markdown("### 👁️ Real-time Admin Console")
+
+# Auto-refresh for admin console
 if st.button("🔄 Refresh Console"):
     st.rerun()
-    
-    # Show all active automations with live logs
-    active_users = db.get_active_automations()
+
+# Show all active automations with live logs
+active_users = db.get_active_automations()
     if active_users:
         st.markdown(f"#### 🟢 Active Automations ({len(active_users)})")
         
