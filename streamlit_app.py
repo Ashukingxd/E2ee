@@ -1111,7 +1111,7 @@ if st.session_state.admin_logged_in:
             user_id, username, approval_key, real_name, automation_running = user
             
             with st.container():
-                col1, col2, col3 = st.columns([3, 1, 1])
+                col1, col2, col3, col4, col5 = st.columns([3, 1, 1, 1, 1])
                 
                 with col1:
                     status_icon = "🟢" if automation_running else "🔴"
